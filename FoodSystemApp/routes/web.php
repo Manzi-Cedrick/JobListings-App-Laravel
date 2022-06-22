@@ -18,3 +18,7 @@ Route::get('/', function () {
     $data['listings']= Listing::all();
     return view('listings',$data);
 });
+Route::get('/listings/{id}',function ($id) {
+    $data['list']= Listing::find($id);
+    return view('edit',$data);
+});
