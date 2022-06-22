@@ -3,9 +3,6 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -19,12 +16,21 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
+        <title><?= $title; ?></title>
     </head>
     <body class="antialiased">
-        <div class="container text-red-500">
-            <h2>Pizza Out Put</h2>
+        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+            <h1>Listing</h1>
             <ul>
-            <li>{{ $type}}-{{$base}}</li>
+            @unless(count($listings)==0)
+            @foreach ($listings as $row)
+            <li>{{$row['id']}}</li>
+            <li>{{$row['title']}}</li>
+            <li>{{$row['description']}}</li>
+            @endforeach
+            @else
+            <p>No listings data</p>
+            @endunless
             </ul>
         </div>
     </body>

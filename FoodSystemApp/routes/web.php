@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Model\Listings;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/pizzas',function (){
-    $pizzas = ["type"=>"Banana","base"=>"banana milk"];
-    return view('pizzas',$pizzas);
+    $data['title']='Listings Route';
+    $data['listings']= Listings::getAll();
+    return view('listings',$data);
 });
