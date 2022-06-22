@@ -100,7 +100,7 @@
             <div
                 class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4"
             >
-       @yield('content');
+       {{$slot}}
        <footer
             class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-24 mt-24 opacity-90 md:justify-center"
         >

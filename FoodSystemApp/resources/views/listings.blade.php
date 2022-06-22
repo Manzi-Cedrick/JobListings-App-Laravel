@@ -1,6 +1,4 @@
-@extends ('layout')
-
-@section('content')
+<x-layout>
             @unless(count($listings)==0)
             @foreach ($listings as $row)
               <x-listCard :row="$row"/>
@@ -8,4 +6,4 @@
             @else
             <p>No listings data</p>
             @endunless
-@endsection()
+</x-layout>
