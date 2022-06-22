@@ -12,7 +12,7 @@
                         />
                         <div>
                             <h3 class="text-2xl">
-                                <a href="/">{{$row->title}}</a>
+                                <a href="">{{$row->title}}</a>
                             </h3>
                             <div class="text-xl font-bold mb-4">{{$row->company}}</div>
                             <ul class="flex">
