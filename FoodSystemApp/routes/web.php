@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Model\Listings;
+use App\Model\Listing;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +16,6 @@ use App\Model\Listings;
 
 Route::get('/', function () {
     $data['title']='Listings Route';
-    $data['listings']= Listings::getAll();
+    $data['listings']= Listing::all();
     return view('listings',$data);
 });
