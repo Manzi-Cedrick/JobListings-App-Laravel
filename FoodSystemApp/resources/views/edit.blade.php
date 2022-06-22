@@ -14,31 +14,10 @@
                         />
 
                         <h3 class="text-2xl mb-2"></h3>
-                        <div class="text-xl font-bold mb-4">{{$list->company}}</div>
-                        <ul class="flex">
-                            <li
-                                class="bg-black text-white rounded-xl px-3 py-1 mr-2"
-                            >
-                                <a href="#">Laravel</a>
-                            </li>
-                            <li
-                                class="bg-black text-white rounded-xl px-3 py-1 mr-2"
-                            >
-                                <a href="#">API</a>
-                            </li>
-                            <li
-                                class="bg-black text-white rounded-xl px-3 py-1 mr-2"
-                            >
-                                <a href="#">Backend</a>
-                            </li>
-                            <li
-                                class="bg-black text-white rounded-xl px-3 py-1 mr-2"
-                            >
-                                <a href="#">Vue</a>
-                            </li>
-                        </ul>
+                        <div class="text-xl font-bold mb-4">{{$listings->company}}</div>
+                        <x-tag :tagName="$listings->tags"/>
                         <div class="text-lg my-4">
-                            <i class="fa-solid fa-location-dot"></i> {{$list->location}}
+                            <i class="fa-solid fa-location-dot"></i> {{$listings->location}}
                         </div>
                         <div class="border border-gray-200 w-full mb-6"></div>
                         <div>
@@ -47,7 +26,7 @@
                             </h3>
                             <div class="text-lg space-y-6">
                                 <p>
-                                   {{$list->description}}
+                                   {{$listings->description}}
                                 </p>
                                 <p>
                                     Lorem, ipsum dolor sit amet consectetur
@@ -59,17 +38,17 @@
                                 </p>
 
                                 <a
-                                    href="mailto:{{$list->email}}"
+                                    href="mailto:{{$listings->email}}"
                                     class="block bg-laravel text-white mt-6 py-2 rounded-xl hover:opacity-80"
                                     ><i class="fa-solid fa-envelope"></i>
-                                    {{$list->email}}</a
+                                    {{$listings->email}}</a
                                 >
 
                                 <a
-                                    href="{{$list->website}}"
+                                    href="{{$listings->website}}"
                                     target="_blank"
                                     class="block bg-black text-white py-2 rounded-xl hover:opacity-80"
-                                    ><i class="fa-solid fa-globe"></i> {{$list->website}}</a>
+                                    ><i class="fa-solid fa-globe"></i> {{$listings->website}}</a>
                                 
                             </div>
                         </div>

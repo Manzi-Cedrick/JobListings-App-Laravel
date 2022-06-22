@@ -19,6 +19,6 @@ Route::get('/', function () {
     return view('listings',$data);
 });
 Route::get('/listings/{listing}',function (Listing $listing) {
-    $data['list']= $listing;
+    $data['listings']= $listing;
     return view('edit',$data);
 });
