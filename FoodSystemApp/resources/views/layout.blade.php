@@ -26,7 +26,25 @@
         <title>LaraGigs | Find Laravel Jobs & Projects</title>
     </head>
     <body class="mb-48">
-        
+        <nav class="flex justify-between items-center mb-4">
+            <a href="index.html"
+                ><img class="w-24" src="images/logo.png" alt="" class="logo"
+            /></a>
+            <ul class="flex space-x-6 mr-6 text-lg">
+                <li>
+                    <a href="register.html" class="hover:text-laravel"
+                        ><i class="fa-solid fa-user-plus"></i> Register</a
+                    >
+                </li>
+                <li>
+                    <a href="login.html" class="hover:text-laravel"
+                        ><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        Login</a
+                    >
+                </li>
+            </ul>
+        </nav>
+
         <!-- Hero -->
         <section
             class="relative h-72 bg-laravel flex flex-col justify-center align-center text-center space-y-4 mb-4"
@@ -55,7 +73,29 @@
 
         <main>
             <!-- Search -->
-           
+            <form action="">
+                <div class="relative border-2 border-gray-100 m-4 rounded-lg">
+                    <div class="absolute top-4 left-3">
+                        <i
+                            class="fa fa-search text-gray-400 z-20 hover:text-gray-500"
+                        ></i>
+                    </div>
+                    <input
+                        type="text"
+                        name="search"
+                        class="h-14 w-full pl-10 pr-20 rounded-lg z-0 focus:shadow focus:outline-none"
+                        placeholder="Search Laravel Gigs..."
+                    />
+                    <div class="absolute top-2 right-2">
+                        <button
+                            type="submit"
+                            class="h-10 w-20 text-white rounded-lg bg-red-500 hover:bg-red-600"
+                        >
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </form>
 
             <div
                 class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4"
