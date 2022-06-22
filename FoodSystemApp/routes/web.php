@@ -15,3 +15,12 @@ use App\Http\Controllers\ListingController;
 
 Route::get('/',[ListingController::class,'index']);
 Route::get('/listings/{listing}',[ListingController::class,'displayListing']);
+
+//Common naming conventions
+//index - show all listings
+// show - show single listings
+// create - show form to create new Listings
+// store - store new listings
+// edit - show form to edit existing listings
+// update - update existing listings
+// destroy - delete existing listings
