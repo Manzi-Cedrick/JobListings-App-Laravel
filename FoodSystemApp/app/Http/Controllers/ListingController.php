@@ -10,9 +10,9 @@ class ListingController extends Controller
     //
     public function index(){
         //we are going to filter using the scope filter in the controller
-        dd(request('tag'));
+        // dd(request('tag'));
         $data['title']='Listings Route';
-        $data['listings']= Listing::all();
+        $data['listings']= Listing::latest()->get();
         return view('listings',$data);
     }
     public function displayListing(Listing $listing){
