@@ -19,7 +19,8 @@ class ListingController extends Controller
         $data['listings']= $listing;
         return view('listings.singlelist',$data);
     }
-    public function create(){
-        return view('listings.createlistings');
+    public function createForm(){
+        // return 'hello';
+        return view('listings.create');
     }
 }
