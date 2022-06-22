@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Listing;
+use App\Http\Controllers\ListingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +13,5 @@ use App\Models\Listing;
 |
 */
 
-Route::get('/', function () {
-    $data['title']='Listings Route';
-    $data['listings']= Listing::all();
-    return view('listings',$data);
-});
-Route::get('/listings/{listing}',function (Listing $listing) {
-    $data['listings']= $listing;
-    return view('edit',$data);
-});
+Route::get('/',[ListingController::class,'index']);
+Route::get('/listings/{listing}',[ListingController::class,'displayListing']);
