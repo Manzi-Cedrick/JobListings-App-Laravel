@@ -1,4 +1,5 @@
 <x-layout>
+
             @unless(count($listings)==0)
             @foreach ($listings as $row)
               <x-listCard :row="$row"/>
