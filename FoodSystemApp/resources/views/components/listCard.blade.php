@@ -11,7 +11,7 @@
                                 <a href="/listings/{{$row->id}}">{{$row->title}}</a>
                             </h3>
                             <div class="text-xl font-bold mb-4">{{$row->company}}</div>
-                           
+                           <x-tag :tagName="$row->tags"/>
                             <div class="text-lg mt-4">
                                 <i class="fa-solid fa-location-dot"></i> {{$row->location}}>
                             </div>
