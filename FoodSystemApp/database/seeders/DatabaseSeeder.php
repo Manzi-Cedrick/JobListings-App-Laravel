@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             'company'=>'Acme Corp',
             'email'=>'cedrickmanzii0@gmail.com',
             'website'=>'facebook.com',
+            'location'=>'kigali,Rwanda',
             'description'=> 'Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum'
         ]);
     }
