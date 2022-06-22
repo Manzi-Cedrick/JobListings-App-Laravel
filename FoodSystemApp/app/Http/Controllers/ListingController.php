@@ -9,6 +9,8 @@ class ListingController extends Controller
 {
     //
     public function index(){
+        //we are going to filter using the scope filter in the controller
+        dd(request('tag'));
         $data['title']='Listings Route';
         $data['listings']= Listing::all();
         return view('listings',$data);
