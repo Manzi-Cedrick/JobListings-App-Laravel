@@ -13,15 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(10)->create();
-        Listing::create([
-            'title'=>'Laravel Senior Developer',
-            'tags'=>'Backend Dev,Javascript',
-            'company'=>'Acme Corp',
-            'email'=>'cedrickmanzii0@gmail.com',
-            'website'=>'facebook.com',
-            'location'=>'kigali,Rwanda',
-            'description'=> 'Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum'
-        ]);
+        // \App\Models\User::factory(10)->create();
+        Listing::factory(10)->create();
     }
 }
