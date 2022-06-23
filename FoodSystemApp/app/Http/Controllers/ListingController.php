@@ -24,6 +24,16 @@ class ListingController extends Controller
         return view('listings.create');
     }
     public function storeForm(Request $request){
-        dd($request->all());
+        $formFields = $request->validate([
+            'title' => 'required',
+            'company'=>'required',
+            'location' => 'required',
+            'email'=>'required',
+            'website' => 'required',
+            'description'=>'required',
+            'tags' => 'required'
+        ]);
+        Listing::create($formFields);
+        redirect('/');
     }
 }
