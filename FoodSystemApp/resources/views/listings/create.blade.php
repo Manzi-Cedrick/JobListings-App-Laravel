@@ -88,6 +88,7 @@
                                 type="text"
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="website"
+                                value="{{old('website')}}"
                             />
                               @error('website')
                                 <small class="text-red-500 ">{{$message}}</small>
@@ -103,6 +104,7 @@
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="tags"
                                 placeholder="Example: Laravel, Backend, Postgres, etc"
+                                value="{{old('tag')}}"
                             />
                               @error('tags')
                                 <small class="text-red-500 ">{{$message}}</small>
