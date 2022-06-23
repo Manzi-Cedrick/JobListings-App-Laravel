@@ -54,6 +54,7 @@
                                 type="text"
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="location"
+                                value="{{old('location')}}"
                                 placeholder="Example: Remote, Boston MA, etc"
                             />
                               @error('location')
@@ -69,6 +70,7 @@
                                 type="text"
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="email"
+                                value="{{old('email')}}"
                             />
                               @error('email')
                                 <small class="text-red-500 ">{{$message}}</small>
