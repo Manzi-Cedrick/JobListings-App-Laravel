@@ -21,6 +21,7 @@
                                 type="text"
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="company"
+                                value="{{old('company')}}"
                             />
                             @error('company')
                                 <p class="text-red-500 ">{{$message}}</p>
@@ -36,6 +37,7 @@
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="title"
                                 placeholder="Example: Senior Laravel Developer"
+                                value="{{old('title')}}"
                             />
                              @error('title')
                                 <small class="text-red-500 ">{{$message}}</small>
