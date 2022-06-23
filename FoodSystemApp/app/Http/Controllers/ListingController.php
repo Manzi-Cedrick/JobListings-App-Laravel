@@ -24,6 +24,6 @@ class ListingController extends Controller
         return view('listings.create');
     }
     public function storeForm(Request $request){
-        return dd($request->all());
+        dd($request->all());
     }
 }
