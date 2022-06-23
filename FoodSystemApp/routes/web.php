@@ -16,7 +16,7 @@ use App\Http\Controllers\ListingController;
 Route::get('/',[ListingController::class,'index']);
 Route::get('/listings/{listing}',[ListingController::class,'displayListing']);
 Route::get('/create',[ListingController::class,'createForm']);
-Route::post('/store',[ListingController::class,'store']);
+Route::post('/store',[ListingController::class,'storeForm']);
 
 //Common naming conventions
 //index - show all listings
