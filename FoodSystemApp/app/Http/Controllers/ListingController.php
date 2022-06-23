@@ -34,6 +34,6 @@ class ListingController extends Controller
             'tags' => 'required'
         ]);
         Listing::create($formFields);
-        return redirect('/');
+        return redirect('/')->with('message','Job Listing successfully created');
     }
 }
