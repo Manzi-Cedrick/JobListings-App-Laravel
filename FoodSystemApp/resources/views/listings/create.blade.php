@@ -10,7 +10,7 @@
                         <p class="mb-4">Post a gig to find a developer</p>
                     </header>
 
-                    <form action="/listings" method="POST">
+                    <form action="/store" method="POST">
                         <div class="mb-6">
                             <label
                                 for="company"
@@ -115,6 +115,7 @@
 
                         <div class="mb-6">
                             <button
+                                type="submit"
                                 class="bg-laravel text-white rounded py-2 px-4 hover:bg-black"
                             >
                                 Create Gig
