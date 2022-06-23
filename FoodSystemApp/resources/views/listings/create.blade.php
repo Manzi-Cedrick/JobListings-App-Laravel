@@ -22,6 +22,9 @@
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="company"
                             />
+                            @error('company')
+                                <p class="text-red-500 ">{{$message}}</p>
+                            @enderror
                         </div>
 
                         <div class="mb-6">
@@ -34,6 +37,9 @@
                                 name="title"
                                 placeholder="Example: Senior Laravel Developer"
                             />
+                             @error('title')
+                                <small class="text-red-500 ">{{$message}}</small>
+                            @enderror
                         </div>
 
                         <div class="mb-6">
@@ -48,6 +54,9 @@
                                 name="location"
                                 placeholder="Example: Remote, Boston MA, etc"
                             />
+                              @error('location')
+                                <small class="text-red-500 ">{{$message}}</small>
+                            @enderror
                         </div>
 
                         <div class="mb-6">
@@ -59,6 +68,9 @@
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="email"
                             />
+                              @error('email')
+                                <small class="text-red-500 ">{{$message}}</small>
+                            @enderror
                         </div>
 
                         <div class="mb-6">
@@ -73,6 +85,9 @@
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="website"
                             />
+                              @error('website')
+                                <small class="text-red-500 ">{{$message}}</small>
+                            @enderror
                         </div>
 
                         <div class="mb-6">
@@ -85,6 +100,9 @@
                                 name="tags"
                                 placeholder="Example: Laravel, Backend, Postgres, etc"
                             />
+                              @error('tags')
+                                <small class="text-red-500 ">{{$message}}</small>
+                            @enderror
                         </div>
 {{-- 
                         <div class="mb-6">
@@ -111,6 +129,9 @@
                                 rows="10"
                                 placeholder="Include tasks, requirements, salary, etc"
                             ></textarea>
+                              @error('description')
+                                <small class="text-red-500 ">{{$message}}</small>
+                            @enderror
                         </div>
 
                         <div class="mb-6">
