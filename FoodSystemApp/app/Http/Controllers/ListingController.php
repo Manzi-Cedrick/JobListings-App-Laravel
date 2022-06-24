@@ -29,15 +29,14 @@ class ListingController extends Controller
             'company'=>'required',
             'location' => 'required',
             'email'=>'required',
-            'logo' => 'required',
             'website' => 'required',
             'description'=>'required',
             'tags' => 'required'
         ]);
         if($request->hasFile('logo')){
-            $formFields['logo'] = $request->file('logo')->store('logos','public');
+            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+            $formFields['user_id'] = auth()->id();
         }
-        $formFields['user_id'] = auth()->id();
         if(Listing::create($formFields)){
             return redirect('/')->with('message','Job Listing successfully created');
         };
