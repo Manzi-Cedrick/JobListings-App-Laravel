@@ -121,6 +121,9 @@
                                 name="logo"
                                 value="{{old('logo')}}"
                             />
+                             @error('logo')
+                                <small class="text-red-500 ">{{$message}}</small>
+                            @enderror
                         </div>
 
                         <div class="mb-6">
