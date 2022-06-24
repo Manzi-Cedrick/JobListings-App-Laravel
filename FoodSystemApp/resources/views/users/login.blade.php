@@ -10,7 +10,7 @@
                         <p class="mb-4">Log in to post gigs</p>
                     </header>
 
-                    <form action="">
+                    <form action="/login/authenticate">
                         <div class="mb-6">
                             <label for="email" class="inline-block text-lg mb-2"
                                 >Email</label
@@ -21,6 +21,9 @@
                                 name="email"
                                 value="{{old('email')}}"
                             />
+                            @error('email')
+                            <small class="text-red-500 ">{{$message}}</small>
+                            @enderror
                         </div>
 
                         <div class="mb-6">
@@ -36,6 +39,9 @@
                                 name="password"
                                 value="{{old('password')}}"
                             />
+                            @error('password')
+                            <small class="text-red-500 ">{{$message}}</small>
+                            @enderror
                         </div>
                         <div class="mb-6">
                             <button
@@ -49,7 +55,7 @@
                         <div class="mt-8">
                             <p>
                                 Don't have an account?
-                                <a href="register.html" class="text-laravel"
+                                <a href="/create" class="text-laravel"
                                     >Register</a
                                 >
                             </p>
