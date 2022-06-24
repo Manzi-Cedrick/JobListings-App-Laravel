@@ -25,7 +25,7 @@ Route::delete('/listings/{listing}/delete',[ListingController::class,'destroy'])
 //The User Login And registration Form
 Route::get('/create',[userController::class,'createForm']);
 Route::post('/store',[userController::class,'insertUser']);
-
+Route::post('/layout',[userController::class,'logout']);
 //Common naming conventions
 //index - show all listings
 // show - show single listings
