@@ -44,10 +44,10 @@
                     >
                 </li>
                 <li>
-                    <a href="/user/logout" class="hover:text-laravel"
-                        ><i class="fa-solid fa-sign-out"></i>
-                        Log Out</a
-                    >
+                    <form action="/logout" class='text-red-500' method='POST'>
+                @csrf
+                <button type="submit" class="btn"><i class="fa-solid mr-2 fa-sign-out"></i>Log out</button>
+            </form>
                 </li>
                 @else
                 <li>
