@@ -16,18 +16,18 @@ use App\Http\Controllers\userController;
 
 Route::get('/',[ListingController::class,'index']);
 Route::get('/listings/{listing}',[ListingController::class,'displayListing']);
-Route::get('/create',[ListingController::class,'createForm']);
-Route::post('/store',[ListingController::class,'storeForm']);
-Route::get('/listings/{listing}/edit',[ListingController::class,'edit']);
-Route::put('/listings/{listing}/update',[ListingController::class,'updateForm']);
-Route::delete('/listings/{listing}/delete',[ListingController::class,'destroy']);
+Route::get('/create',[ListingController::class,'createForm'])->middleware('auth');
+Route::post('/store',[ListingController::class,'storeForm'])->middleware('auth');
+Route::get('/listings/{listing}/edit',[ListingController::class,'edit'])->middleware('auth');
+Route::put('/listings/{listing}/update',[ListingController::class,'updateForm'])->middleware('auth');
+Route::delete('/listings/{listing}/delete',[ListingController::class,'destroy'])->middleware('auth');
 
 //The User Login And registration Form
-Route::get('/create',[userController::class,'createForm']);
-Route::post('/store',[userController::class,'insertUser']);
-Route::post('/logout',[userController::class,'logout']);
-Route::get('/login',[userController::class,'login']);
-Route::get('/login/authenticate',[userController::class,'authenticate']);
+Route::get('/register',[userController::class,'createForm'])->middleware('guest');
+Route::post('/store',[userController::class,'insertUser'])->middleware('guest');
+Route::post('/logout', [userController::class, 'logout'])->middleware('auth');
+Route::get('/login',[userController::class,'login'])->name('login')->middleware('guest');
+Route::post('/login/authenticate',[userController::class,'authenticate'])->middleware('guest');
 //Common naming conventions
 //index - show all listings
 // show - show single listings

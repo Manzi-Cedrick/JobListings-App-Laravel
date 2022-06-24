@@ -41,7 +41,7 @@ class userController extends Controller
             'email' => 'required',
             'password' => 'required'
         ]);
-        if (auth()->attempt($formFields)) {
+        if ( auth()->attempt($formFields)) {
             $request->session()->regenerate();
             return redirect('/')->with('message','User signed In');
         }else{

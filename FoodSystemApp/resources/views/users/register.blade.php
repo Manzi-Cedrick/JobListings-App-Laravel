@@ -93,7 +93,7 @@
                         <div class="mt-8">
                             <p>
                                 Already have an account?
-                                <a href="login.html" class="text-laravel"
+                                <a href="/login" class="text-laravel"
                                     >Login</a
                                 >
                             </p>
