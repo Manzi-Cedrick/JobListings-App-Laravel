@@ -20,6 +20,11 @@ Route::post('/store',[ListingController::class,'storeForm']);
 Route::get('/listings/{listing}/edit',[ListingController::class,'edit']);
 Route::put('/listings/{listing}/update',[ListingController::class,'updateForm']);
 Route::delete('/listings/{listing}/delete',[ListingController::class,'destroy']);
+
+//The User Login And registration Form
+Route::get('/create',[userController::class,'createForm']);
+Route::post('/store',[userController::class,'addUser']);
+
 //Common naming conventions
 //index - show all listings
 // show - show single listings
