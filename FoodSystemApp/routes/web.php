@@ -16,8 +16,8 @@ use App\Http\Controllers\userController;
 
 Route::get('/',[ListingController::class,'index']);
 Route::get('/listings/{listing}',[ListingController::class,'displayListing']);
-Route::get('/create',[ListingController::class,'createForm'])->middleware('auth');
-Route::post('/store',[ListingController::class,'storeForm'])->middleware('auth');
+Route::get('/create',[ListingController::class,'createForm']);
+Route::post('/store/listing',[ListingController::class,'storeForm']);
 Route::get('/listings/{listing}/edit',[ListingController::class,'edit'])->middleware('auth');
 Route::put('/listings/{listing}/update',[ListingController::class,'updateForm'])->middleware('auth');
 Route::delete('/listings/{listing}/delete',[ListingController::class,'destroy'])->middleware('auth');
