@@ -9,7 +9,7 @@
                     >
                         <img
                             class="w-48 mr-6 mb-6"
-                            src="images/acme.png"
+                            src="{{ $listings->logo ? asset(' storage/ '. $listings->logo) : asset('/images/no-image.png')}}"
                             alt=""
                         />
 
@@ -53,6 +53,9 @@
                             </div>
                         </div>
                     </div>
+                <a href="/" class="inline-block text-black ml-4 mt-5 mb-4"
+                ><i class="fa-solid fa-pencil"></i>Edit
+            </a>
                 </div>
             </div>
             </x-layout>
