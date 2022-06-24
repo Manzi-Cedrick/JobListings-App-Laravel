@@ -3,7 +3,7 @@
                     <div class="flex">
                         <img
                             class="hidden w-48 mr-6 md:block"
-                            src="images/acme.png"
+                            src="{{ $row->logo ? asset(' storage/ '. $row->logo) : asset('/images/no-image.png')}}"
                             alt="No image"
                         />
                         <div>
