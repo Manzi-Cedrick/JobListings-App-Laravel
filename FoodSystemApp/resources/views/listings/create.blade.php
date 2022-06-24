@@ -110,7 +110,7 @@
                                 <small class="text-red-500 ">{{$message}}</small>
                             @enderror
                         </div>
-{{-- 
+
                         <div class="mb-6">
                             <label for="logo" class="inline-block text-lg mb-2">
                                 Company Logo
@@ -119,8 +119,9 @@
                                 type="file"
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="logo"
+                                value="{{old('logo')}}"
                             />
-                        </div> --}}
+                        </div>
 
                         <div class="mb-6">
                             <label
