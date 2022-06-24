@@ -58,6 +58,10 @@ class ListingController extends Controller
         $listing->update($formFields);
         // return back()->with('message','Job Updated successfully created');
         // the back redirect is also available
-        return redirect('/')->with('message','Job Updated successfully created');
+        return redirect('/')->with('message','Job Listing Updated successfully created');
+    }
+    public function destroy(Listing $listing){
+        $listing->delete();
+        redirect('/')->with('message','Job Listing Deleted successfully');
     }
 }
