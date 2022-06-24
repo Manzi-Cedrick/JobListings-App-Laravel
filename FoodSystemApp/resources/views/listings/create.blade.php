@@ -120,6 +120,7 @@
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="logo"
                                 value="{{old('logo')}}"
+                                accept="image/*"
                             />
                              @error('logo')
                                 <small class="text-red-500 ">{{$message}}</small>
