@@ -55,7 +55,9 @@
                     </div>
                 </div>
             </div>
-                <a href="/listings/{{$listings->id}}/edit" class="inline-block text-black ml-4  mt-5 mb-4"
+            <x-card class=" mt-5 flex flex-gap-4">
+            <a href="/listings/{{$listings->id}}/edit" class="inline-block text-black ml-4 mb-4"
                 ><i class="fa-solid mr-2 fa-pencil"></i>Edit
             </a>
+            </x-card>
             </x-layout>
