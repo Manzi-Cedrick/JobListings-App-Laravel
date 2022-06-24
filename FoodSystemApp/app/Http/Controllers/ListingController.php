@@ -62,6 +62,6 @@ class ListingController extends Controller
     }
     public function destroy(Listing $listing){
         $listing->delete();
-        redirect('/')->with('message','Job Listing Deleted successfully');
+        return redirect('/')->with('message','Job Listing Deleted successfully');
     }
 }
