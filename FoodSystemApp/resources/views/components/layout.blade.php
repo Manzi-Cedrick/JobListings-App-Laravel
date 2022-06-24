@@ -39,7 +39,7 @@
                 </li>
                 <li>
                     <a href="login.html" class="hover:text-laravel"
-                        ><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        ><i class="fa-solid fa-gear"></i>
                         Manage Listings</a
                     >
                 </li>
