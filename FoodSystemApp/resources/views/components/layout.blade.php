@@ -43,6 +43,12 @@
                         Manage Listings</a
                     >
                 </li>
+                <li>
+                    <a href="/user/logout" class="hover:text-laravel"
+                        ><i class="fa-solid fa-sign-out"></i>
+                        Log Out</a
+                    >
+                </li>
                 @else
                 <li>
                     <a href="register.html" class="hover:text-laravel"
