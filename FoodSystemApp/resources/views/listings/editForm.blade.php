@@ -5,12 +5,12 @@
                 >
                     <header class="text-center">
                         <h2 class="text-2xl font-bold uppercase mb-1">
-                            Create a Gig
+                            Edit
                         </h2>
-                        <p class="mb-4">Post a gig to find a developer</p>
+                        <p class="mb-4">Edit: {{$listings->title}}</p>
                     </header>
 
-                    <form action="/store" method="POST" enctype="multipart/form-data">
+                    <form action="/listins/{{$listings->id}}/update" method="POST" enctype="multipart/form-data">
                         <div class="mb-6">
                             <label
                                 for="company"
@@ -21,7 +21,7 @@
                                 type="text"
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="company"
-                                value="{{old('company')}}"
+                                value="{{$listings->company}}"
                             />
                             @error('company')
                                 <p class="text-red-500 ">{{$message}}</p>
@@ -37,7 +37,7 @@
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="title"
                                 placeholder="Example: Senior Laravel Developer"
-                                value="{{old('title')}}"
+                               value="{{$listings->title}}"
                             />
                              @error('title')
                                 <small class="text-red-500 ">{{$message}}</small>
@@ -54,7 +54,7 @@
                                 type="text"
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="location"
-                                value="{{old('location')}}"
+                               value="{{$listings->location}}"
                                 placeholder="Example: Remote, Boston MA, etc"
                             />
                               @error('location')
@@ -70,7 +70,7 @@
                                 type="text"
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="email"
-                                value="{{old('email')}}"
+                                value="{{$listings->email}}"
                             />
                               @error('email')
                                 <small class="text-red-500 ">{{$message}}</small>
@@ -88,7 +88,7 @@
                                 type="text"
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="website"
-                                value="{{old('website')}}"
+                                value="{{$listings->website}}"
                             />
                               @error('website')
                                 <small class="text-red-500 ">{{$message}}</small>
@@ -104,7 +104,7 @@
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="tags"
                                 placeholder="Example: Laravel, Backend, Postgres, etc"
-                                value="{{old('tag')}}"
+                                value="{{$listings->tags}}"
                             />
                               @error('tags')
                                 <small class="text-red-500 ">{{$message}}</small>
@@ -119,7 +119,7 @@
                                 type="file"
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="logo"
-                                value="{{old('logo')}}"
+                               value="{{$listings->logo}}"
                             />
                              @error('logo')
                                 <small class="text-red-500 ">{{$message}}</small>
@@ -138,7 +138,7 @@
                                 name="description"
                                 rows="10"
                                 placeholder="Include tasks, requirements, salary, etc"
-                                value="{{old('description')}}"
+                               value="{{$listings->description}}"
                             ></textarea>
                               @error('description')
                                 <small class="text-red-500 ">{{$message}}</small>
@@ -150,7 +150,7 @@
                                 type="submit"
                                 class="bg-laravel text-white rounded py-2 px-4 hover:bg-black"
                             >
-                                Create Gig
+                                Update Gig
                             </button>
 
                     </form>

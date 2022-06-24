@@ -39,4 +39,7 @@ class ListingController extends Controller
         }
         return redirect('/')->with('message','Job Listing successfully created');
     }
+    public function edit(Listing $listing){
+        return view('listings.editForm',['listings'=>$listing]);
+    }
 }
