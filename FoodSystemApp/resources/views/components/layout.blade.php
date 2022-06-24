@@ -51,7 +51,7 @@
                 </li>
                 @else
                 <li>
-                    <a href="register.html" class="hover:text-laravel"
+                    <a href="/create" class="hover:text-laravel"
                         ><i class="fa-solid fa-user-plus"></i> Register</a
                     >
                 </li>
