@@ -27,6 +27,7 @@ Route::get('/create',[userController::class,'createForm']);
 Route::post('/store',[userController::class,'insertUser']);
 Route::post('/logout',[userController::class,'logout']);
 Route::get('/login',[userController::class,'login']);
+Route::get('/login/authenticate',[userController::class,'authenticate']);
 //Common naming conventions
 //index - show all listings
 // show - show single listings
