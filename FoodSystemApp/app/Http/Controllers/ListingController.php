@@ -24,7 +24,7 @@ class ListingController extends Controller
         return view('listings.create');
     }
     public function storeForm(Request $request){
-        dd(request('logo'));
+        dd($request->file('logo'));
         $formFields = $request->validate([
             'title' => 'required',
             'company'=>'required',
