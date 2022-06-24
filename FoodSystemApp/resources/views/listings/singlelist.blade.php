@@ -59,5 +59,9 @@
             <a href="/listings/{{$listings->id}}/edit" class="inline-block text-black ml-4 mb-4"
                 ><i class="fa-solid mr-2 fa-pencil"></i>Edit
             </a>
+            <form action="/listings/{{$listings->id}}/delete">
+                @method('DELETE')
+                <button type="submit" class="btn btn-red"></button>
+            </form>
             </x-card>
             </x-layout>
