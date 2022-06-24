@@ -11,8 +11,9 @@
                         <p class="mb-4">Create an account to post gigs</p>
                     </header>
 
-                    <form action="/store" method='post'>
+                    <form action="/store" method="POST">
                         @csrf
+                        @method('POST')
                         <div class="mb-6">
                             <label for="name" class="inline-block text-lg mb-2">
                                 Name
@@ -21,6 +22,7 @@
                                 type="text"
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="name"
+                                value="{{old('name')}}"
                             />
                             @error('name')
                                 <small class="text-red-500 ">{{$message}}</small>
@@ -35,6 +37,7 @@
                                 type="email"
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="email"
+                                value="{{old('email')}}"
                             />
                             <!-- Error Example -->
                             @error('email')
@@ -53,6 +56,7 @@
                                 type="password"
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="password"
+                                value="{{old('password')}}"
                             />
                             @error('password')
                                 <small class="text-red-500 ">{{$message}}</small>
@@ -69,9 +73,10 @@
                             <input
                                 type="password"
                                 class="border border-gray-200 rounded p-2 w-full"
-                                name="password2"
+                                name="password_confirmation"
+                                value="{{old('password_confirmation')}}"
                             />
-                            @error('password2')
+                            @error('password_confirmation')
                                 <small class="text-red-500 ">{{$message}}</small>
                             @enderror
                         </div>
