@@ -55,13 +55,14 @@
                     </div>
                 </div>
             </div>
-            <x-card class=" mt-5 flex flex-gap-4">
+            <x-card class="mt-5 flex space-x-6 ">
             <a href="/listings/{{$listings->id}}/edit" class="inline-block text-black ml-4 mb-4"
                 ><i class="fa-solid mr-2 fa-pencil"></i>Edit
             </a>
-            <form action="/listings/{{$listings->id}}/delete">
+            <form action="/listings/{{$listings->id}}/delete" class='text-red-500' method='POST'>
+                @csrf
                 @method('DELETE')
-                <button type="submit" class="btn btn-red"></button>
+                <button type="submit" class="btn"><i class="fa-solid mr-2 fa-trash"></i>Delete</button>
             </form>
             </x-card>
             </x-layout>
