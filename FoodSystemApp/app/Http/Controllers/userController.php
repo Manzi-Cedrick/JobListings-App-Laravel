@@ -29,8 +29,8 @@ class userController extends Controller
     }
     public function logout(Request $request){
         auth()->logout();
-        $request->session->invalidate();
-        $request->session->regenerateToken();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
         return redirect('/')->with('message','User signed out');
     }
 }
