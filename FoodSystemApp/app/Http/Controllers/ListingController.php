@@ -56,6 +56,8 @@ class ListingController extends Controller
             $formFields['logo'] = $request->file('logo')->store('logos','public');
         }
         $listing->update($formFields);
-        return back()->with('message','Job Updated successfully created');
+        // return back()->with('message','Job Updated successfully created');
+        // the back redirect is also available
+        return redirect('/')->with('message','Job Updated successfully created');
     }
 }
