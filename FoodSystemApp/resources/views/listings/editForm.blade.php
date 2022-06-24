@@ -11,6 +11,7 @@
                     </header>
 
                     <form action="/listins/{{$listings->id}}/update" method="POST" enctype="multipart/form-data">
+                        @method('PUT')
                         <div class="mb-6">
                             <label
                                 for="company"
