@@ -12,7 +12,7 @@ class ListingController extends Controller
         //we are going to filter using the scope filter in the controller
         // dd(request('tag'));
         $data['title']='Listings Route';
-        $data['listings']= Listing::latest()->filter(request(['tags','search']))->paginate(4);
+        $data['listings']= Listing::latest()->filter(request(['tags','search']))->paginate(6);
         return view('listings.listings',$data);
     }
     public function displayListing(Listing $listing){
