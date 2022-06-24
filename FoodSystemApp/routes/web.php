@@ -17,6 +17,7 @@ Route::get('/',[ListingController::class,'index']);
 Route::get('/listings/{listing}',[ListingController::class,'displayListing']);
 Route::get('/create',[ListingController::class,'createForm']);
 Route::post('/store',[ListingController::class,'storeForm']);
+Route::get('/listings/{listing}/edit',[ListingController::class,'edit']);
 
 //Common naming conventions
 //index - show all listings
