@@ -9,9 +9,10 @@
                         </h2>
                         <p class="mb-4">Log in to post gigs</p>
                     </header>
-
+                    
                     <form action="/login/authenticate" method="POST">
                         @csrf
+                        @method('POST')
                         <div class="mb-6">
                             <label for="email" class="inline-block text-lg mb-2"
                                 >Email</label

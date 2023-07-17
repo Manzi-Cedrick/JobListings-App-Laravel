@@ -36,3 +36,4 @@ Route::post('/login/authenticate',[userController::class,'authenticate'])->middl
 // edit - show form to edit existing listings
 // update - update existing listings
 // destroy - delete existing listings
+?>
